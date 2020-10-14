@@ -16,7 +16,7 @@ fun main() {
       temp = data[i]
       data[i] = data[i+1]
       data[i+1] = temp
-      println("${swap}. [${data[i+1]}, ${data[i]}] -> ${data.joinToString(separator = " ")}")
+      println("${swap}. [${data[i]}, ${data[i + 1]}] -> ${data.joinToString(separator = " ")}")
       i = 0
     } else {
       i++
