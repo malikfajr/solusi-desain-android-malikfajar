@@ -1,9 +1,8 @@
 fun hello(name: String = "") :String {
   if (name.length == 0) {
     return "Hello, World!"
-  } else {
-    return "Hello, ${name.toLowerCase().capitalize()}!"
-  }
+  } 
+  return "Hello, ${name.toLowerCase().capitalize()}!"
 }
 
 fun main() {
