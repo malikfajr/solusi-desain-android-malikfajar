@@ -1,10 +1,10 @@
-<h1>Try Out by <i>Solusi Desain</i><h1>
-<h2>How to compile</h2>
-```kotlinc <name file>.kt -include-runtime -d <name file>.jar``` <br>
-example <br>
-```kotlinc hello.kt -include-runtime -d hello.jar``` <br>
+#Try Out by Solusi Desain
+##How to compile
+`kotlinc <name file>.kt -include-runtime -d <name file>.jar```
+example
+```kotlinc hello.kt -include-runtime -d hello.jar```
 
-<h2>How to run</h2>
-```kotlin <name file>.jar``` <br>
-example <br>
-```kotlin hello.jar``` <br>
+##How to run
+```kotlin <name file>.jar```
+example
+```kotlin hello.jar```
