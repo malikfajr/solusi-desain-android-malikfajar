@@ -11,33 +11,13 @@ fun main() {
 
 fun setToArr(txt: String): List<String> {
   var keys = listOf("Burger", "Fries", "Chicken", "Pizza", "Sandwich", "Onionrings", "Milkshake", "Coke")
-  var arr = mutableListOf<String>()
   var result = mutableListOf<String>()
-  var len = txt.length
-  var i = 0
 
-  while(i < len) {
-    lpp@ for (j in keys) {
-      var txtLen = j.length
-      if (txtLen + i > len){
-          continue@lpp
-      }
-
-      if (txt.substring(i, i + txtLen).equals(j, ignoreCase = true)) {
-        i = i + txtLen - 1
-        arr.add(j)
-        break@lpp
-      }
-    }
-    i++
-  }
-
-  for (key in keys) {
-    item@ for (k in arr) {
-      if (key == k) {
-        result.add(k)
-        continue@item
-      }
+  for(item in keys) {
+    var pattern = Regex(item.lowercase())
+    var getItem : Sequence<MatchResult>  = pattern.findAll(txt.lowercase())
+    getItem.forEach(){
+      result.add(item)
     }
   }
 
